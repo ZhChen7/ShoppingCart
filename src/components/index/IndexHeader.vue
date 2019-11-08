@@ -46,6 +46,8 @@
                                 <li><a href="#">个人中心</a></li>
                                 <li><a href="#">修改密码</a></li>
                                 <li role="separator" class="divider"></li>
+                                <li><router-link to="/shoppingtrolley">购物车</router-link></li>
+                                <li role="separator" class="divider"></li>
                                 <li><a href="#">退出</a></li>
                             </ul>
                         </li>

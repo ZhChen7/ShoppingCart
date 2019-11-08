@@ -8,7 +8,7 @@
 }
 body{
     font-size: 24px;
-//background: linear-gradient(66deg, #e41749, #f5587b, #ff8a5c, #fff591);
+    /*background: linear-gradient(66deg, #e41749, #f5587b, #ff8a5c, #fff591);*/
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 //background: #F0F3EF;
 }
@@ -19,11 +19,17 @@ a{
     text-decoration: none;
     color: #333;
 }
+.router-link-active{
+    text-decoration: none;
+}
+.router-link-active:hover{
+    text-decoration: none !important;
+}
 input,textarea{
     border: none;
     outline: none;
     resize: none;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
 }
 /*common css*/
 .f_left{
@@ -40,4 +46,22 @@ input,textarea{
     height: 0;
     line-height: 0;
     clear: both;
+}
+
+input{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    /*-webkit-appearance: textfield;*/
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
 }

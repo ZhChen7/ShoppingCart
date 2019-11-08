@@ -15,7 +15,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <a href="">
+                    <router-link to="/cartshow">
                         <header>
                             <img src="https://img14.360buyimg.com/jdcms/s300x300_jfs/t1/54615/20/15153/333535/5dc286a8Ee03e26d1/1246169644375261.jpg.webp" alt="">
                         </header>
@@ -24,10 +24,10 @@
                             <span>￥2050.00</span>
                             <div>卷</div>
                         </footer>
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a href="">
+                    <router-link to="/cartshow">
                         <header>
                             <img src="https://img14.360buyimg.com/jdcms/s300x300_jfs/t1/54615/20/15153/333535/5dc286a8Ee03e26d1/1246169644375261.jpg.webp" alt="">
                         </header>
@@ -36,8 +36,9 @@
                             <span>￥2050.00</span>
                             <div>卷</div>
                         </footer>
-                    </a>
+                    </router-link>
                 </li>
+
             </ul>
         </div>
     </div>
