@@ -4,8 +4,18 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    existboo:{
+      exist:false
+    },
+    user:{}
+  },
+  mutations: {
+    adduser(state,user){
+      state.existboo.exist=true
+      state.user = user
+    }
+  },
   actions: {},
   modules: {}
 });

@@ -15,9 +15,10 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li ><a href="#" style="color: red">亲，请登录 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">免费注册</a></li>
+                    <ul class="nav navbar-nav" >
+                        <li v-if="flag"><router-link to="/login" style="color: red">亲，请登录 <span class="sr-only">(current)</span></router-link></li>
+                        <li v-else><a href="#" >{{this.$store.state.user.username}}</a></li>
+                        <li ><router-link to="/register">免费注册</router-link></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我的购物车 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -39,7 +40,8 @@
                         <button type="submit" class="btn btn-default"> 搜索 </button>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">首页</a></li>
+                        <!--<li><a href="#" v-if="flag">欢迎 {{user.username}}</a></li>-->
+                        <li><router-link to="/">首页</router-link></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -60,7 +62,28 @@
 
 <script>
     export default {
-        name: "IndexHeader"
+        name: "IndexHeader",
+        props:{
+          user:Object
+        },
+        data(){
+          return{
+            flag: true
+          }
+        },
+      watch: {
+        $route() {
+          if(this.$store.state.existboo.exist){
+            this.flag = false
+          }
+        }
+      },
+      mounted(){
+          console.log(this.$store.state)
+            if(this.$store.state.existboo.exist){
+              this.flag = false
+            }
+       }
     }
 </script>
 

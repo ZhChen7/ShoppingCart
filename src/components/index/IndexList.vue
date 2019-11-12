@@ -2,43 +2,18 @@
     <div>
         <div class="IndexList">
             <ul>
-                <li>
-                    <router-link to="/cartshow">
+                <li v-for="item in list.result" :key="item.id">
+                    <router-link :to="'/cartshow/'+item.id" >
                         <header>
-                            <img src="https://img14.360buyimg.com/jdcms/s300x300_jfs/t1/54615/20/15153/333535/5dc286a8Ee03e26d1/1246169644375261.jpg.webp" alt="">
+                            <img :src="item.smallimg" alt="">
                         </header>
-                        <div class="list_intro">狄豪（DIHAO）沙发 沙发客厅整装现代简约布艺沙发 客厅皮布组合沙发8043沙发 双人+贵妃+单人【3.47米】</div>
+                        <div class="list_intro">{{item.Commoditytitle}}</div>
                         <footer>
-                            <span>￥2050.00</span>
+                            <span>￥{{item.price}}</span>
                             <div>卷</div>
                         </footer>
                     </router-link>
                 </li>
-                <li>
-                    <router-link to="/cartshow">
-                        <header>
-                            <img src="https://img14.360buyimg.com/jdcms/s300x300_jfs/t1/54615/20/15153/333535/5dc286a8Ee03e26d1/1246169644375261.jpg.webp" alt="">
-                        </header>
-                        <div class="list_intro">狄豪（DIHAO）沙发 沙发客厅整装现代简约布艺沙发 客厅皮布组合沙发8043沙发 双人+贵妃+单人【3.47米】</div>
-                        <footer>
-                            <span>￥2050.00</span>
-                            <div>卷</div>
-                        </footer>
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/cartshow">
-                        <header>
-                            <img src="https://img14.360buyimg.com/jdcms/s300x300_jfs/t1/54615/20/15153/333535/5dc286a8Ee03e26d1/1246169644375261.jpg.webp" alt="">
-                        </header>
-                        <div class="list_intro">狄豪（DIHAO）沙发 沙发客厅整装现代简约布艺沙发 客厅皮布组合沙发8043沙发 双人+贵妃+单人【3.47米】</div>
-                        <footer>
-                            <span>￥2050.00</span>
-                            <div>卷</div>
-                        </footer>
-                    </router-link>
-                </li>
-
             </ul>
         </div>
     </div>
@@ -46,7 +21,10 @@
 
 <script>
     export default {
-        name: "IndexList"
+        name: "IndexList",
+      props:{
+        list: Object
+      }
     }
 </script>
 
